@@ -1,0 +1,51 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  color: white;
+  background-color: #3b3b3b;
+}
+
+@media (max-width:640px) {
+  .name,
+  .character-height,
+  .hairColor,
+  img{
+    width:auto;
+  }
+}
+
+span{
+  color: yellow;
+}
+
+h1{
+  text-align: center;
+}
+
+strong{
+  color: yellow;
+}
+
+div.name{
+  background-color: black;
+  color: white;
+}
+
+div.hairColor{
+  background-color: black;
+  color: white;
+}
+
+div.character-height{
+  background-color: black;
+  color: white;
+}
+
+button:hover{
+  transition: 0.3s;
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+}

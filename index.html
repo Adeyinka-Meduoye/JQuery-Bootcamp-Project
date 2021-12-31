@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Adeyinka's Starwars Randomizer</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <h1>ADEYINKA'S <span>STARWARS RANDOMIZER</span></h1>
+    <div class="">
+      <strong>Name:</strong>
+      <div class="name">
+        ...
+      </div>
+      <strong>Height:</strong>
+      <div class="character-height">
+        ...
+      </div>
+      <strong>HairColor:</strong>
+      <div class="hairColor">
+        ...
+      </div>
+      <img src="" alt="" class="character-image">
+    </div>
+    <button type="button" name="button" class="generate">Generate Character</button>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $(".generate").on("click", function(){
+        const randomNumber = Math.ceil(Math.random() * 88)
+        $.get(`https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`, function(data){
+          $("div.name").text(data['name'])
+          $(".character-height").text(data['height'])
+          $(".character-image").attr("src", data['image'])
+          $(".hairColor").text(data['hairColor'])
+
+        })
+      })
+
+    })
+
+    </script>
+  </body>
+</html>
